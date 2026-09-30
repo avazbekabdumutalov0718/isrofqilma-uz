@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ISROF QILMA UZ — ortiqcha ovqat, material va buyumlarni isrofdan saqlovchi circular economy platformasi." />
+  <title>ISROF QILMA UZ — Tashlama. Sot. Ulash. Qayta ishlat.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section id="welcomeScreen" class="welcome-screen">
+    <div class="welcome-orb orb-1"></div>
+    <div class="welcome-orb orb-2"></div>
+    <div class="welcome-inner">
+      <div class="welcome-brand">
+        <div class="welcome-logo">IQ</div>
+        <div>
+          <strong>ISROF QILMA</strong>
+          <span>UZ</span>
+        </div>
+      </div>
+
+      <div class="welcome-copy">
+        <span class="welcome-kicker">♻️ CIRCULAR ECONOMY • UZBEKISTAN</span>
+        <h1>Isrofni kamaytiramiz.<br><em>Qiymatni qaytaramiz.</em></h1>
+        <p>
+          Ortiqcha ovqat, qayta ishlanadigan material, uyda qolgan buyum,
+          bog‘ va hovlidan chiqqan o‘tin — tashlab yuborilmasdan oldin
+          yana bir insonga, biznesga yoki qayta ishlash tizimiga foyda keltirsin.
+        </p>
+      </div>
+
+      <div class="welcome-values">
+        <div><b>🍱</b><span>Food Rescue</span></div>
+        <div><b>♻️</b><span>Recycle</span></div>
+        <div><b>🪵</b><span>O‘tin bozori</span></div>
+        <div><b>🛵</b><span>Collector</span></div>
+      </div>
+
+      <button id="startBtn" class="welcome-start">
+        Boshlash
+        <span>→</span>
+      </button>
+
+      <div class="welcome-note">
+        <strong>ISROF QILMA kambag‘allikni targ‘ib qilmaydi.</strong>
+        Bu platforma foydalanishga yaroqli narsani “past darajadagi” mahsulot deb emas,
+        <b>resurs</b> deb ko‘radi. Maqsad — tejamkorlik, ekologik mas’uliyat va
+        zamonaviy qayta foydalanish madaniyatini rivojlantirish.
+      </div>
+    </div>
+  </section>
+
+  <div id="mainApp" class="app-shell hidden-app">
+    <header class="topbar">
+      <a class="brand" href="#home" data-route="home" aria-label="Bosh sahifa">
+        <span class="brand-mark">IQ</span>
+        <span>
+          <strong>ISROF QILMA</strong>
+          <small>UZ</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#marketplace" data-route="marketplace">Marketplace</a>
+        <a href="#platform" data-route="platform">Platform</a>
+        <a href="#collector" data-route="collector">Collector</a>
+        <a href="#earn" data-route="earn">Earn</a>
+        <a href="#business" data-route="business">Business</a>
+        <a href="#impact" data-route="impact">Impact</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="ghost-btn" id="walletBtn">Hamyon <span id="walletMini">0 so‘m</span></button>
+        <button class="primary-btn small" id="addListingBtn">+ E’lon berish</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#marketplace" data-route="marketplace">Marketplace</a>
+      <a href="#platform" data-route="platform">Platform</a>
+      <a href="#collector" data-route="collector">Collector</a>
+      <a href="#earn" data-route="earn">Earn</a>
+      <a href="#business" data-route="business">Business</a>
+      <a href="#impact" data-route="impact">Impact</a>
+    </div>
+
+    <main id="app"></main>
+
+    <footer class="footer">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">IQ</span>
+          <span><strong>ISROF QILMA</strong><small>UZ</small></span>
+        </div>
+        <p>Resursni qadrlaydigan O‘zbekiston uchun circular economy platformasi.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#marketplace" data-route="marketplace">Marketplace</a>
+        <a href="#collector" data-route="collector">Collector</a>
+        <a href="#business" data-route="business">Biznes</a>
+        <a href="#impact" data-route="impact">Impact</a>
+      </div>
+      <div class="footer-note">ISROF QILMA UZ • © 2026</div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
